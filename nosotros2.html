@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - MotoMundo.pe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr 1fr;
+      gap: 36px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .about-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .about-column h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    .about-column p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .about-img:hover img {
+      transform: scale(1.03);
+    }
+
+    .about-img.tall {
+      aspect-ratio: 16 / 10;
+    }
+
+    .about-img.square {
+      aspect-ratio: 1 / 1;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .social-links a {
+      width: 38px;
+      height: 38px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .social-links a:hover {
+      border-color: #dc3545;
+      color: #dc3545;
+      background: #fff5f5;
+    }
+
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f8f8f8;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .stat-badge i {
+      color: #dc3545;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-left">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a class="header-brand" href="index.html">
+        <i class="fa-solid fa-motorcycle"></i> MotoMundo.pe
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="servicio.html">Servicio Técnico</a></li>
+          <li><a href="tiendas.html">Nuestras Tiendas</a></li>
+          <li><a href="contacto.html">Encuéntranos</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <div class="search-container">
+        <input type="text" placeholder="Buscar" id="searchInput">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <a href="#" class="user-icon" aria-label="Perfil">
+        <i class="fa-regular fa-user"></i>
+      </a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+  </header>
+
+  <h1 class="text-center fw-bold" style="font-size: 2.5rem; margin: 40px 0 0;">MotoMundo.pe</h1>
+
+  <main class="about-grid">
+    <section class="about-column">
+      <div>
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <span class="stat-badge"><i class="fa-solid fa-calendar-check"></i> Desde 2015</span>
+          <span class="stat-badge"><i class="fa-solid fa-users"></i> +500 clientes</span>
+        </div>
+        <h2>Nuestra Historia</h2>
+        <p>Nacimos en 2015 con la misión de acercar las mejores motos a los amantes del motociclismo en Perú. Lo que comenzó como un pequeño taller familiar, hoy es una de las tiendas más reconocidas del país.</p>
+        <p>Creemos en la calidad, la transparencia y la pasión por las dos ruedas. Cada moto que vendemos pasa por rigurosos controles para garantizar la mejor experiencia a nuestros clientes.</p>
+      </div>
+      <div class="about-img square">
+        <img src="https://images.unsplash.com/photo-1617777939775-30044c1f4757?w=600&h=600&fit=crop" alt="Taller MotoMundo.pe" loading="lazy">
+      </div>
+    </section>
+
+    <section class="about-column">
+      <div class="about-img tall">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&h=500&fit=crop" alt="Colección de motos" loading="lazy">
+      </div>
+      <div>
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <span class="stat-badge"><i class="fa-solid fa-motorcycle"></i> +80 modelos</span>
+          <span class="stat-badge"><i class="fa-solid fa-award"></i> 6 marcas</span>
+        </div>
+        <h2>Pasión por las Motos</h2>
+        <p>Contamos con un catálogo de más de 80 modelos de las mejores marcas del mundo: Yamaha, Honda, Kawasaki, Suzuki, Ducati y Harley-Davidson. Desde motos urbanas hasta deportivas de alta cilindrada.</p>
+        <p>Nuestro equipo de expertos te asesora para encontrar la moto que se adapte a tu estilo de vida y presupuesto. Además, ofrecemos servicio técnico especializado y garantía en todas nuestras motos.</p>
+      </div>
+    </section>
+
+    <section class="about-column">
+      <div>
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <span class="stat-badge"><i class="fa-solid fa-location-dot"></i> 6 sucursales</span>
+          <span class="stat-badge"><i class="fa-solid fa-headset"></i> Soporte 24/7</span>
+        </div>
+        <h2>Encuéntranos</h2>
+        <p>Estamos presentes en 6 sucursales a nivel nacional: Lima Centro, Miraflores, San Isidro, Arequipa, Cajamarca y Piura. Visítanos y conoce en persona nuestra colección.</p>
+        <p>Síguenos en redes sociales para estar al tanto de nuestras promociones, lanzamientos y eventos. Somos una comunidad apasionada por las motos.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="about-img square">
+        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&h=600&fit=crop" alt="Moto cruiser" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 MotoMundo.pe. Todos los derechos reservados.</p>
+      <p class="mb-0">
+        <a href="#" class="text-white me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    const overlay = document.getElementById("mobileOverlay");
+
+    function openMenu() {
+      mainNav.classList.add("open");
+      overlay.classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+      mainNav.classList.remove("open");
+      overlay.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    menuToggle.addEventListener("click", openMenu);
+    overlay.addEventListener("click", closeMenu);
+    document.querySelectorAll(".main-nav a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+  </script>
+</body>
+</html>
