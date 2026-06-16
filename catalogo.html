@@ -9,6 +9,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
+    .catalog-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 80px 0;
+      color: #fff;
+    }
+
+    .catalog-hero.bg-image {
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1600") center / cover no-repeat;
+    }
+
+    .catalog-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+    }
+
+    .catalog-hero .lead {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.1rem;
+    }
+
     .catalog-layout {
       display: grid;
       grid-template-columns: 260px 1fr;
@@ -390,10 +411,10 @@
     <div class="mobile-overlay" id="mobileOverlay"></div>
   </header>
 
-  <section class="py-4 bg-light border-bottom">
-    <div class="container text-center">
-      <h1 class="fw-bold mb-1">Catálogo de Motos</h1>
-      <p class="text-muted mb-0">Encuentra la moto perfecta para ti</p>
+  <section class="catalog-hero text-center">
+    <div class="container">
+      <h1>Catálogo de Motos</h1>
+      <p class="lead mx-auto" style="max-width: 600px;">Encuentra la moto perfecta para ti. Explora nuestras marcas, compara modelos y elige la tuya.</p>
     </div>
   </section>
 
