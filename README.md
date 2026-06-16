@@ -1,4 +1,4 @@
-# MotoWorld - Tienda de Motos
+# MotoMundo.pe - Tienda de Motos
 
 Proyecto web de una tienda de motos desarrollado con **HTML5** y **Bootstrap 5**.
 
