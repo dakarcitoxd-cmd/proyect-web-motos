@@ -6,14 +6,13 @@ Proyecto web completo de una tienda de motos desarrollado con **HTML5 semántico
 
 ```
 proyect-web-motos/
-├── index.html            # Landing page principal (168 líneas)
-├── nosotros.html         # Quiénes somos (118 líneas)
-├── catalogo.html         # Catálogo con 7 filtros dinámicos (573 líneas)
-├── catalogo2.html        # Versión alternativa del catálogo (567 líneas)
-├── servicio.html         # Servicio Técnico con planes, FAQ y CTAs (462 líneas)
-├── tiendas.html          # Nuestras Tiendas con 6 sucursales (181 líneas)
-├── contacto.html         # Formulario de contacto con validación (158 líneas)
-├── presentacion.html     # Presentación del proyecto (335 líneas)
+├── index.html            # Landing page principal
+├── nosotros.html         # Quiénes somos
+├── catalogo.html         # Catálogo con 7 filtros dinámicos
+├── servicio.html         # Servicio Técnico con planes, FAQ y CTAs
+├── tiendas.html          # Nuestras Tiendas con 6 sucursales
+├── contacto.html         # Formulario de contacto con validación
+├── presentacion.html     # Presentación del proyecto
 ├── css/
 │   └── styles.css        # Estilos personalizados (213 líneas)
 └── README.md
@@ -50,10 +49,6 @@ proyect-web-motos/
 - Botón "Agregar" con alerta interactiva
 - Filtros combinados con lógica AND en JS
 - Responsive: menú de filtros colapsable en móvil
-
-### catalogo2.html — Catálogo alternativo
-- Misma estructura y funcionalidad que catalogo.html
-- Diseño de grid alternativo
 
 ### servicio.html — Servicio Técnico
 - Hero con gradiente oscuro y CTAs (Agendar Cita, Ver Servicios)
@@ -120,14 +115,4 @@ proyect-web-motos/
 | `contacto.html` | `submit` evento | Valida formulario y muestra mensaje de éxito |
 | Todas | Menú móvil | Toggle del panel de navegación lateral |
 
-## Cómo ver localmente
 
-```bash
-npx serve .
-```
-
-O abre cualquier archivo `.html` directamente en tu navegador.
-
-## Repositorio
-
-[https://github.com/dakarcitoxd-cmd/proyect-web-motos](https://github.com/dakarcitoxd-cmd/proyect-web-motos)
