@@ -10,25 +10,25 @@
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .service-hero {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      padding: 80px 0;
-      color: #fff;
+      background: #fff;
+      padding: 40px 0 50px;
+      color: #222;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     .service-hero h1 {
       font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .service-hero .lead {
-      color: rgba(255, 255, 255, 0.75);
+      color: #666;
       font-size: 1.1rem;
     }
 
     .service-card {
       border: none;
       border-radius: 16px;
-      overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       height: 100%;
     }
@@ -178,8 +178,8 @@
         <h1>Servicio Técnico Especializado</h1>
         <p class="lead mx-auto" style="max-width: 650px;">Diagnóstico computarizado, mantenimiento preventivo y reparación general. Técnicos certificados con más de 10 años de experiencia.</p>
         <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-          <a href="#contacto" class="btn btn-light btn-lg px-4 fw-bold">Agendar Cita</a>
-          <a href="#servicios" class="btn btn-outline-light btn-lg px-4">Ver Servicios</a>
+          <a href="#contacto" class="btn btn-danger btn-lg px-4 fw-bold">Agendar Cita</a>
+          <a href="#servicios" class="btn btn-outline-dark btn-lg px-4">Ver Servicios</a>
         </div>
       </div>
     </section>
@@ -213,7 +213,7 @@
           <div class="col-md-4">
             <div class="card service-card shadow-sm border-danger">
               <div class="card-header bg-white position-relative">
-                <span class="position-absolute top-0 start-50 translate-middle badge bg-danger">Más popular</span>
+                <span class="badge bg-danger position-absolute" style="top: -18px; left: 50%; transform: translateX(-50%); z-index: 2;">Más popular</span>
                 <i class="fa-solid fa-tools text-danger"></i>
               </div>
               <div class="card-body text-center">

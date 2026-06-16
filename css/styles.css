@@ -196,18 +196,7 @@ header {
   }
 }
 
-/* ===== HERO ===== */
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1600") center / cover no-repeat;
-  min-height: 70vh;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-}
-
-/* ===== FEATURES ===== */
+/* ===== ICON FEATURE ===== */
 .icon-feature {
   font-size: 3rem;
   transition: transform 0.3s ease;
@@ -217,21 +206,6 @@ header {
   transform: scale(1.15);
 }
 
-/* ===== CARDS ===== */
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-.moto-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.moto-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
 /* ===== FOOTER ===== */
 footer a {
   transition: opacity 0.2s ease;
@@ -239,15 +213,4 @@ footer a {
 
 footer a:hover {
   opacity: 0.7;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 576px) {
-  .hero {
-    min-height: 50vh;
-  }
-
-  .display-4 {
-    font-size: 2rem;
-  }
 }
