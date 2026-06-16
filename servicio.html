@@ -8,6 +8,135 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .service-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 80px 0;
+      color: #fff;
+    }
+
+    .service-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+    }
+
+    .service-hero .lead {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.1rem;
+    }
+
+    .service-card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card .card-header {
+      border-bottom: none;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .service-card .price {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #dc3545;
+    }
+
+    .service-card .price small {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #888;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: #dc3545;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border: none;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      height: 100%;
+    }
+
+    .testimonial-card .stars {
+      color: #f5a623;
+      font-size: 0.9rem;
+    }
+
+    .faq-section {
+      background: #f8f9fa;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: #dc3545;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: #dc3545;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);
+      padding: 60px 0;
+      color: #fff;
+    }
+
+    .cta-section h2 {
+      font-weight: 800;
+    }
+
+    .badge-service {
+      background: #dc3545;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .check-list li {
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+
+    .check-list li i {
+      color: #dc3545;
+    }
+  </style>
 </head>
 <body>
 
@@ -42,54 +171,290 @@
     <div class="mobile-overlay" id="mobileOverlay"></div>
   </header>
 
-  <main class="container my-5">
-    <section aria-labelledby="service-heading">
-      <div class="text-center mb-5">
-        <h1 id="service-heading" class="display-4 fw-bold">Servicio Técnico</h1>
-        <p class="lead text-muted">Mantenimiento y reparación especializada para tu moto</p>
-      </div>
-
-      <div class="row g-5 align-items-center mb-5">
-        <div class="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1617777939775-30044c1f4757?w=800&h=500&fit=crop"
-            alt="Taller de servicio técnico" class="img-fluid rounded shadow" loading="lazy">
-        </div>
-        <div class="col-lg-6">
-          <h2 class="mb-3">Confía tu moto a los expertos</h2>
-          <p>En <strong>MotoMundo.pe</strong> contamos con técnicos certificados y equipos de diagnóstico de última generación para mantener tu moto en óptimas condiciones.</p>
-          <p>Realizamos desde cambios de aceite y revisión de frenos hasta reparaciones mayores de motor y transmisión. Todos nuestros servicios incluyen garantía.</p>
-          <p>Trabajamos con todas las marcas y modelos. Presupuesto sin compromiso.</p>
+  <main>
+    <section class="service-hero text-center">
+      <div class="container">
+        <span class="badge-service mb-3 d-inline-block">Taller Autorizado</span>
+        <h1>Servicio Técnico Especializado</h1>
+        <p class="lead mx-auto" style="max-width: 650px;">Diagnóstico computarizado, mantenimiento preventivo y reparación general. Técnicos certificados con más de 10 años de experiencia.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+          <a href="#contacto" class="btn btn-light btn-lg px-4 fw-bold">Agendar Cita</a>
+          <a href="#servicios" class="btn btn-outline-light btn-lg px-4">Ver Servicios</a>
         </div>
       </div>
+    </section>
 
-      <h2 class="text-center mb-4">Nuestros Servicios</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <article class="card border-0 shadow-sm h-100 text-center p-4">
-            <i class="fa-solid fa-oil-can text-danger" style="font-size: 2.5rem;"></i>
-            <h3 class="h5 mt-3">Mantenimiento Preventivo</h3>
-            <p class="text-muted mb-0">Cambio de aceite, filtros, bujías y revisión general cada 5,000 km.</p>
-          </article>
+    <section id="servicios" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Nuestros Servicios</h2>
+          <p class="text-muted">Elige el plan que mejor se adapte a tu moto</p>
         </div>
-        <div class="col-md-4">
-          <article class="card border-0 shadow-sm h-100 text-center p-4">
-            <i class="fa-solid fa-tools text-danger" style="font-size: 2.5rem;"></i>
-            <h3 class="h5 mt-3">Reparación General</h3>
-            <p class="text-muted mb-0">Diagnóstico computarizado y reparación de motor, transmisión y eléctrica.</p>
-          </article>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card service-card shadow-sm">
+              <div class="card-header bg-white">
+                <i class="fa-solid fa-oil-can text-danger"></i>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h5 fw-bold">Mantenimiento Preventivo</h3>
+                <p class="text-muted small">Cambio de aceite, filtros, bujías y revisión de 50 puntos.</p>
+                <ul class="check-list text-start mb-4">
+                  <li><i class="fa-solid fa-check"></i> Cambio de aceite y filtro</li>
+                  <li><i class="fa-solid fa-check"></i> Revisión de frenos y suspensión</li>
+                  <li><i class="fa-solid fa-check"></i> Ajuste de cadena y transmisión</li>
+                  <li><i class="fa-solid fa-check"></i> Diagnóstico computarizado</li>
+                </ul>
+                <p class="price">S/ 149 <small>+ IGV</small></p>
+                <button class="btn btn-danger w-100 fw-bold">Agendar <i class="fa-solid fa-arrow-right ms-1"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card service-card shadow-sm border-danger">
+              <div class="card-header bg-white position-relative">
+                <span class="position-absolute top-0 start-50 translate-middle badge bg-danger">Más popular</span>
+                <i class="fa-solid fa-tools text-danger"></i>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h5 fw-bold">Reparación General</h3>
+                <p class="text-muted small">Diagnóstico y reparación de motor, transmisión y sistema eléctrico.</p>
+                <ul class="check-list text-start mb-4">
+                  <li><i class="fa-solid fa-check"></i> Reparación de motor y transmisión</li>
+                  <li><i class="fa-solid fa-check"></i> Sistema eléctrico y electrónico</li>
+                  <li><i class="fa-solid fa-check"></i> Prueba de compresión y fugas</li>
+                  <li><i class="fa-solid fa-check"></i> Garantía de 6 meses</li>
+                </ul>
+                <p class="price">S/ 399 <small>+ IGV</small></p>
+                <button class="btn btn-danger w-100 fw-bold">Agendar <i class="fa-solid fa-arrow-right ms-1"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card service-card shadow-sm">
+              <div class="card-header bg-white">
+                <i class="fa-solid fa-paint-roller text-danger"></i>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h5 fw-bold">Personalización</h3>
+                <p class="text-muted small">Pintura, accesorios y modificaciones para darle tu estilo.</p>
+                <ul class="check-list text-start mb-4">
+                  <li><i class="fa-solid fa-check"></i> Pintura y calcomanías</li>
+                  <li><i class="fa-solid fa-check"></i> Instalación de accesorios</li>
+                  <li><i class="fa-solid fa-check"></i> Modificaciones estéticas</li>
+                  <li><i class="fa-solid fa-check"></i> Asesoría personalizada</li>
+                </ul>
+                <p class="price">S/ 249 <small>+ IGV</small></p>
+                <button class="btn btn-danger w-100 fw-bold">Agendar <i class="fa-solid fa-arrow-right ms-1"></i></button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <article class="card border-0 shadow-sm h-100 text-center p-4">
-            <i class="fa-solid fa-paint-roller text-danger" style="font-size: 2.5rem;"></i>
-            <h3 class="h5 mt-3">Personalización</h3>
-            <p class="text-muted mb-0">Pintura, calcomanías, accesorios y modificaciones estéticas.</p>
-          </article>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">¿Cómo trabajamos?</h2>
+          <p class="text-muted">Tu moto en las mejores manos en solo 4 pasos</p>
         </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="text-center">
+              <div class="step-number mx-auto mb-3">1</div>
+              <h3 class="h6 fw-bold">Agenda tu cita</h3>
+              <p class="text-muted small mb-0">Llama o reserva online el día y hora que prefieras.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <div class="step-number mx-auto mb-3">2</div>
+              <h3 class="h6 fw-bold">Diagnóstico gratuito</h3>
+              <p class="text-muted small mb-0">Revisamos tu moto con equipo computarizado.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <div class="step-number mx-auto mb-3">3</div>
+              <h3 class="h6 fw-bold">Presupuesto sin compromiso</h3>
+              <p class="text-muted small mb-0">Te cotizamos antes de cualquier reparación.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <div class="step-number mx-auto mb-3">4</div>
+              <h3 class="h6 fw-bold">Recoge tu moto</h3>
+              <p class="text-muted small mb-0">Te avisamos cuando esté lista y la pruebas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Lo que dicen nuestros clientes</h2>
+          <p class="text-muted">Más de 500 motos reparadas con éxito</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="stars mb-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mb-3 small">"Traje mi Yamaha R1 con un problema eléctrico que ningún taller pudo resolver. Lo diagnosticaron en 15 minutos y quedó como nuevo. 100% recomendados."</p>
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://i.pravatar.cc/40?img=11" alt="" class="rounded-circle" width="40" height="40">
+                <div>
+                  <strong class="small">Carlos Mendoza</strong>
+                  <p class="text-muted small mb-0">Yamaha R1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="stars mb-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mb-3 small">"Excelente servicio de mantenimiento. Me explicaron todo lo que le hicieron a mi Honda Rebel, con fotos y video. La moto quedó con otro rendimiento."</p>
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://i.pravatar.cc/40?img=5" alt="" class="rounded-circle" width="40" height="40">
+                <div>
+                  <strong class="small">María Torres</strong>
+                  <p class="text-muted small mb-0">Honda Rebel 500</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="stars mb-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mb-3 small">"Personalicé mi Kawasaki Z400 con ellos. El trabajo en pintura quedó impecable, parecen de fábrica. Muy profesionales y puntuales."</p>
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://i.pravatar.cc/40?img=12" alt="" class="rounded-circle" width="40" height="40">
+                <div>
+                  <strong class="small">Diego Huamán</strong>
+                  <p class="text-muted small mb-0">Kawasaki Z400</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Preguntas Frecuentes</h2>
+          <p class="text-muted">Resolvemos tus dudas sobre nuestro servicio técnico</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item mb-2 border-0 rounded shadow-sm">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    ¿Cuánto tiempo toma un mantenimiento preventivo?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    El mantenimiento preventivo completo toma entre 1 y 2 horas, dependiendo del modelo y el estado de la moto. Incluye revisión de 50 puntos y cambio de aceite.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2 border-0 rounded shadow-sm">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    ¿Dan presupuesto antes de reparar?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Sí. Realizamos un diagnóstico gratuito y te entregamos un presupuesto detallado por escrito antes de cualquier trabajo. Solo procedemos con tu autorización.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2 border-0 rounded shadow-sm">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    ¿Trabajan con todas las marcas?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Sí, trabajamos con todas las marcas y modelos del mercado. Nuestros técnicos están capacitados para diagnosticar y reparar cualquier moto, sin importar la marca o el año.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2 border-0 rounded shadow-sm">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    ¿Ofrecen garantía en las reparaciones?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Todas nuestras reparaciones cuentan con garantía de 6 meses en mano de obra y repuestos. Si algo no queda conforme, lo arreglamos sin costo adicional.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 rounded shadow-sm">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    ¿Puedo esperar mientras reparan mi moto?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Sí, contamos con una sala de espera cómoda con Wi-Fi, café y TV. Para reparaciones largas, también ofrecemos servicio de recojo y entrega a domicilio.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="cta-section text-center">
+      <div class="container">
+        <h2>¿Listo para dejar tu moto en manos expertas?</h2>
+        <p class="mb-4" style="font-size: 1.1rem; opacity: 0.9;">Agenda tu cita hoy y recibe un diagnóstico computarizado completamente gratis.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="tel:+51999888777" class="btn btn-light btn-lg px-5 fw-bold">
+            <i class="fa-solid fa-phone me-2"></i> Llámanos
+          </a>
+          <a href="contacto.html" class="btn btn-outline-light btn-lg px-5">
+            <i class="fa-solid fa-calendar-check me-2"></i> Reserva Online
+          </a>
+        </div>
+        <p class="mt-4 mb-0" style="opacity: 0.7; font-size: 0.9rem;">
+          <i class="fa-regular fa-clock me-1"></i> Lun - Sáb: 9:00 AM - 7:00 PM
+        </p>
       </div>
     </section>
   </main>
 
-  <footer class="bg-dark text-white text-center py-4 mt-5">
+  <footer class="bg-dark text-white text-center py-4">
     <div class="container">
       <p class="mb-1">&copy; 2026 MotoMundo.pe. Todos los derechos reservados.</p>
       <p class="mb-0">
@@ -120,7 +485,6 @@
 
     menuToggle.addEventListener("click", openMenu);
     overlay.addEventListener("click", closeMenu);
-
     document.querySelectorAll(".main-nav a").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
