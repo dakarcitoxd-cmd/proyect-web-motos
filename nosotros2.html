@@ -108,6 +108,33 @@
       color: #dc3545;
     }
 
+    .about-hero {
+      background: #fff;
+      padding: 40px 0;
+      color: #222;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+    }
+
+    .about-hero .lead {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .badge-about {
+      background: #dc3545;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
     @media (max-width: 900px) {
       .about-grid {
         grid-template-columns: 1fr;
@@ -150,7 +177,13 @@
     <div class="mobile-overlay" id="mobileOverlay"></div>
   </header>
 
-  <h1 class="text-center fw-bold" style="font-size: 2.5rem; margin: 40px 0 0;">MotoMundo.pe</h1>
+  <section class="about-hero text-center">
+    <div class="container">
+      <span class="badge-about mb-3 d-inline-block">Quiénes somos</span>
+      <h1>Sobre Nosotros</h1>
+      <p class="lead mx-auto" style="max-width: 650px;">Conoce nuestra historia y pasión por las motos. Más de 10 años brindando el mejor servicio a nuestros clientes.</p>
+    </div>
+  </section>
 
   <main class="about-grid">
     <section class="about-column">
